@@ -200,3 +200,19 @@ div.activities {
         font-size: 1.2rem;
     }
 }
+
+/* API section */
+.api{
+    padding: 5%;
+    text-align: center;
+    background-color: #e0e0e0;
+}
+.api p{
+    font-size: larger;
+    font-family: bruno ace, sans-serif;
+}
+.api button{
+    font-family: audiowide, sans-serif;
+    padding: 2%;
+    border-radius: 15px;
+ }
