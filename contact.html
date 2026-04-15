@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cosmic Oasis</title>
+    <link rel="stylesheet" href=https://fonts.googleapis.com/css?family=Lora|Audiowide|Bruno+Ace>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+    <a href="#top" class="scroll-top" id="scrollTopButton" aria-label="Back to top">↑</a>
+    <nav class="navbar">
+        <a href="index.html" class="home">Cosmic Oasis<sup>&copy;</sup></a>
+            <div class="buttons">            
+                <a href="activities.html">Activities</a>
+                <a href="scheduling.html">Scheduling</a>
+                <a href="about.html">About the Station</a>
+                <a href="contact.html">Contact Us</a>
+            </div> 
+        <img src="images/icons/NewLogo.png" alt="Logo" class="logo">
+    </nav>
+    <script>
+        const scrollTopButton = document.getElementById('scrollTopButton');
+        const toggleScrollTop = () => {
+            const isScrolled = window.pageYOffset > 20;
+            scrollTopButton.classList.toggle('show', isScrolled);
+        };
+        window.addEventListener('scroll', toggleScrollTop);
+        window.addEventListener('load', toggleScrollTop);
+    </script>
+    <div class="left-section">
+        <div class="left-box">
+            <div class="header">
+                <h2>Activities</h2>
+                <img src="images/icons/01.png" alt="Activities Icon" class="box-icon">
+            </div>
+            <div class="main-section-left">
+                <div class="left-box-left-item">
+                    <img src="images/BattleRoomFilm.webp" alt="Battle Room" class="box-image">
+                </div>
+                <div class="left-box-right-item">
+                    <p>At Cosmic Oasis, we offer a wide range of activities to keep you entertained during your stay. 
+                        From zero-gravity sports and spacewalks to stargazing, there's something for everyone.</p>
+                </div>
+            </div>
+            <a class="box-button-left" href="activities.html">
+                <img src="images/icons/button.png" alt="Button Icon" class="button-icon">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
