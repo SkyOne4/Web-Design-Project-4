@@ -7,7 +7,8 @@
     <link rel="stylesheet" href=https://fonts.googleapis.com/css?family=Lora|Audiowide|Bruno+Ace>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
+    <a href="#top" class="scroll-top" id="scrollTopButton" aria-label="Back to top">↑</a>
     <nav class="navbar">
         <a href="index.html" class="home">Cosmic Oasis<sup>&copy;</sup></a>
             <div class="buttons">            
@@ -27,6 +28,9 @@
                     views of the cosmos. Our state-of-the-art space station offers a 
                     unique blend of comfort and wonder, allowing you to explore the 
                     universe while enjoying luxurious accommodations.</p>
+                <button class="heroButton" href="scheduling.html" type="button">
+                <img src="images/launch-button.png" alt="Button Icon" class="button-icon">
+            </button>
             </div>
             <div class="welcome-image">
                 <img src="images/spacehotel.jpg" alt="Space Hotel" class="spacehotel">
@@ -53,33 +57,15 @@
             </button>
         </div>
     </div>
-<div class="api">
-    <p>Click the button to get your coordinates.</p>
-
-    <button onclick="getLocation()">Try It</button>
-
-    <p id="demo"></p>
-
-    <script>
-    const x = document.getElementById("demo");
-
-    function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(success, error);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-    }
-
-    function success(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-    }
-
-    function error() {
-    alert("Sorry, no position available.");
-    }
-    </script>
 </div>
+    <script>
+        const scrollTopButton = document.getElementById('scrollTopButton');
+        const toggleScrollTop = () => {
+            const isScrolled = window.pageYOffset > 20;
+            scrollTopButton.classList.toggle('show', isScrolled);
+        };
+        window.addEventListener('scroll', toggleScrollTop);
+        window.addEventListener('load', toggleScrollTop);
+    </script>
 </body>
 </html>
