@@ -223,7 +223,6 @@ div.activities{
         font-size: 1.2rem;
     }
 }
-
 .scroll-top{
     position: fixed;
     top: 1rem;
@@ -246,18 +245,15 @@ div.activities{
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
-
 .scroll-top.show{
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
-
 .scroll-top:hover{
     transform: translateY(-2px);
     background: rgb(248, 187, 1);
 }
-
 @media (max-width: 600px){
     .scroll-top{
         top: 0.75rem;
@@ -267,4 +263,61 @@ div.activities{
         font-size: 1.3rem;
     }
 }
+div.thirdbox{
+    background-color: rgb(8, 19, 36);
+    padding: 2% 4%;
+    margin: 0;
+}
+div.scheduling{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: rgb(33, 82, 134);
+    border: none;
+    border-radius: 45px;
+    padding: 2rem;
+    color: white;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+.scheduling-icon{
+    width: 92px;
+    height: auto;
+    flex-shrink: 0;
+}
+.scheduling-left{
+flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Audiowide', sans-serif;
+}
+image{
 
+}
+.scheduling-right{
+    flex: 1.25;
+    border: 5px solid #000000;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
+}
+.scheduling-left p{
+    font-size: 1.35rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #e0e0e0;
+}
+.scheduling-button{
+    margin-top: 1.5rem;
+    margin-left: auto;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.scheduling-button:hover{
+    transform: scale(1.05);
+}

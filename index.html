@@ -19,6 +19,15 @@
             </div> 
         <img src="images/NewLogo.png" alt="Logo" class="logo">
     </nav>
+    <script>
+        const scrollTopButton = document.getElementById('scrollTopButton');
+        const toggleScrollTop = () => {
+            const isScrolled = window.pageYOffset > 20;
+            scrollTopButton.classList.toggle('show', isScrolled);
+        };
+        window.addEventListener('scroll', toggleScrollTop);
+        window.addEventListener('load', toggleScrollTop);
+    </script>
     <div class="firstbox">
         <h1>Sleep Among the Stars.</h1>
         <div class="welcome">
@@ -43,7 +52,7 @@
                 <h2>Activities</h2>
                 <img src="images/01.png" alt="Activities Icon" class="activities-icon">
             </div>
-                        <div class="main-section">
+            <div class="main-section">
                 <div class="activities-left">
                     <img src="images/BattleRoomFilm.webp" alt="Battle Room" class="battle-image">
                 </div>
@@ -57,15 +66,25 @@
             </button>
         </div>
     </div>
-</div>
-    <script>
-        const scrollTopButton = document.getElementById('scrollTopButton');
-        const toggleScrollTop = () => {
-            const isScrolled = window.pageYOffset > 20;
-            scrollTopButton.classList.toggle('show', isScrolled);
-        };
-        window.addEventListener('scroll', toggleScrollTop);
-        window.addEventListener('load', toggleScrollTop);
-    </script>
+    <div class="thirdbox">
+        <div class="scheduling">
+            <div class="header">
+                <img src="images/02.png" alt="Scheduling Icon" class="scheduling-icon">
+                <h2>Scheduling</h2>
+            </div>
+            <div class="main-section">
+                <div class="scheduling-left">
+                    <p>At Cosmic Oasis, we offer a wide range of activities to keep you entertained during your stay. 
+                        From zero-gravity sports and spacewalks to stargazing, there's something for everyone.</p>
+                </div>
+                <div class="scheduling-right">
+                    <img src="images/BattleRoomFilm.webp" alt="Battle Room" class="battle-image">
+                </div>
+            </div>
+            <button class="scheduling-button" href="scheduling.html" type="button">
+                <img src="images/button.png" alt="Button Icon" class="button-icon">
+            </button>
+        </div>
+    </div>    
 </body>
 </html>
