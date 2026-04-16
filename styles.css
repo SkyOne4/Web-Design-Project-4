@@ -29,7 +29,6 @@ div.buttons{
   display: flex;
   flex-wrap: wrap;
   align-self: center;
-  align-items: center;
   justify-content: center;
   gap: 0.6rem;
   background-color: rgb(65, 115, 204);
@@ -42,6 +41,7 @@ div.buttons a{
     font-size: 1.5rem;
     color: white;   
     margin: 0.35rem;
+    padding: 0 0.5rem;
     text-decoration: none;
     text-shadow: 1px 1px 1px black;
 }
@@ -213,7 +213,7 @@ div.left-box{
     .header h2{
         font-size: 2.4rem;
     }
-    .activities-icon{
+    .box-icon{
         width: 68px;
     }
     .left-box-left-item{
@@ -262,15 +262,6 @@ div.left-box{
 .scroll-top:hover{
     transform: translateY(-2px);
     background: rgb(248, 187, 1);
-}
-@media (max-width: 600px){
-    .scroll-top{
-        top: 0.75rem;
-        right: 0.75rem;
-        width: 2.6rem;
-        height: 2.6rem;
-        font-size: 1.3rem;
-    }
 }
 div.right-section{
     background-color: rgb(8, 19, 36);
