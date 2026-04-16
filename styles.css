@@ -45,6 +45,10 @@ div.buttons a{
     text-decoration: none;
     text-shadow: 1px 1px 1px black;
 }
+div.buttons a.active{
+    color: rgb(248, 187, 1);
+    text-shadow: 2px 2px 2px black;
+}
 .buttons a:hover{
     color: rgb(161, 12, 67);
     text-shadow: 1px 1px 1px white;
