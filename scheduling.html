@@ -28,13 +28,91 @@
         window.addEventListener('scroll', toggleScrollTop);
         window.addEventListener('load', toggleScrollTop);
     </script>
-    <div class="rooms">
-        <button class="room-button">Room 1</button>
-        <button class="room-button">Room 2</button>
-        <button class="room-button">Room 3</button>
-        <button class="room-button">Room 4</button>
-        <button class="room-button">Room 5</button>
+    <script>
+        function room(roomNumber) {
+            // Remove selected class from all buttons
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('room' + i).classList.remove('selected');
+            }
+            // Add selected class to the clicked button
+            document.getElementById('room' + roomNumber).classList.add('selected');
+
+            const roomImage = document.querySelector('.schedule-image');
+            const topic = document.querySelector('.topic');
+            const price = document.querySelector('.price');
+            const description = document.querySelector('.description');
+
+            switch (roomNumber) {
+                case 1:
+                    roomImage.src = 'images/room1.jpeg';
+                    topic.innerHTML = '<strong>Capacity:</strong> 2 guests';
+                    price.innerHTML = '<strong>Price:</strong> $350/week';
+                    description.textContent = 'Our standard room, featuring a cozy bed, private bathroom, and a large window for stargazing.';
+                    break;
+                case 2:
+                    roomImage.src = 'images/room2.png';
+                    topic.innerHTML = '<strong>Capacity:</strong> 4 guests';
+                    price.innerHTML = '<strong>Price:</strong> $525/week';
+                    description.textContent = 'A spacious suite with a panoramic window, perfect for astronomy enthusiasts who want to immerse themselves in the beauty of space.';
+                    break;
+                case 3:
+                    roomImage.src = 'images/room3.jpeg';
+                    topic.innerHTML = '<strong>Capacity:</strong> 6+ guests';
+                    price.innerHTML = '<strong>Price:</strong> $700/week';
+                    description.textContent = 'A family-friendly room with multiple beds and entertainment options, ideal for those traveling with loved ones.';
+                    break;
+                case 4:
+                    roomImage.src = 'images/room4.jpeg';
+                    topic.innerHTML = '<strong>Capacity:</strong> 2 guests';
+                    price.innerHTML = '<strong>Price:</strong> $500/week';
+                    description.textContent = 'A romantic suite designed for couples, featuring a private hot tub and luxurious amenities for an unforgettable experience.';
+                    break;
+                case 5:
+                    roomImage.src = 'images/room5.jpg';
+                    topic.innerHTML = '<strong>Capacity:</strong> 4 guests';
+                    price.innerHTML = '<strong>Price:</strong> $850/week';
+                    description.textContent = 'Our premium room offering the ultimate space experience with exclusive access to the station\'s amenities and personalized services.';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Initialize the first room as selected
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('room1').classList.add('selected');
+        });
+    </script>
+    <div class="scheduling">
+        <div class="roombox">
+            <div class="room-buttons">
+                <button type="button" onclick="room(1)" id="room1">Orbital Haven</button>
+                <button type="button" onclick="room(2)" id="room2">Observation Suite</button>
+                <button type="button" onclick="room(3)" id="room3">Stellar Family</button>
+                <button type="button" onclick="room(4)" id="room4">Galactic Honeymoon Villa</button>
+                <button type="button" onclick="room(5)" id="room5">Orbital Oasis</button>
+            </div>
+            <div class="room-image">
+                <img src="images/room1.jpeg" alt="room" class="schedule-image" style="background-color: aliceblue;">
+            </div>
+        </div>
+        <div class="room-description">
+            <div class="details">
+                <p class="topic"><strong>Capacity:</strong> 2 guests</p>
+                <p class="price"><strong>Price:</strong> $350/week</p>
+            </div>
+            <p class="description">Our standard room, featuring a cozy bed, 
+                private bathroom, and a large window for 
+                stargazing.</p>
+        </div>
+        <a class="book-button">
+            <img src="images/icons/launch-button.png" alt="Button Icon" class="button-icon">
+        </a>
     </div>
-    
+    <div class="map">
+        <p class="pads">Available Launchpads</p>
+        <iframe src="https://www.google.com/maps/embed?"></iframe>
+    </div>
 </body>
 </html>
+
